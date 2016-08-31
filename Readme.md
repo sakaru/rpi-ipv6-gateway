@@ -1,6 +1,24 @@
 # Raspberry PI IPv6 gateway installation #
 
-[TOC]
+Table of Contents
+=================
+
+  * [About](#about)
+  * [Before jumping down the rabbit hole](#before-jumping-down-the-rabbit-hole)
+  * [Setting up the tunnel](#setting-up-the-tunnel)
+  * [Installing the Operating System](#installing-the-operating-system)
+    * [ArchlinuxARM](#archlinuxarm)
+    * [Initial setup](#initial-setup)
+    * [Setting a static IPv4 address](#setting-a-static-ipv4-address)
+    * [Reboot](#reboot)
+  * [Setting up the IPv6 tunnel](#setting-up-the-ipv6-tunnel)
+    * [Adding the he-ipv6 device](#adding-the-he-ipv6-device)
+      * [Testing the he-ipv6 device](#testing-the-he-ipv6-device)
+    * [radvd](#radvd)
+      * [Testing radvd](#testing-radvd)
+    * [ip6tables](#ip6tables)
+      * [Testing ip6tables](#testing-ip6tables)
+    * [Auto-update the tunnel endpoint on a dynamic IP](#auto-update-the-tunnel-endpoint-on-a-dynamic-ip)
 
 ## About ##
 This will let you set up a Raspberry PI 2 to act as an IPv6 tunnel and IPv6 DHCP server on your LAN. All your devices will automatically recieve IPv6 addresses when they connect to your LAN.
