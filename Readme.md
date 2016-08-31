@@ -26,7 +26,7 @@ Table of Contents
     * [Netflix :(](#netflix-)
 
 ## About ##
-This will let you set up a Raspberry PI 2 to act as an IPv6 tunnel and IPv6 DHCP server on your LAN. All your devices will automatically recieve IPv6 addresses when they connect to your LAN.
+This will let you set up a Raspberry PI 2 to act as an IPv6 tunnel and IPv6 DHCP server on your LAN. All your devices will automatically receive IPv6 addresses when they connect to your LAN.
 
 I used a Raspberry PI 2. A version 3 Pi would work too, but I felt the wifi feature wouldn't be used for the project, so why tie up my Raspberry Pi 3 for this project.
 
@@ -67,7 +67,7 @@ systemctl enable sshd
 systemctl start cronie
 systemctl enable cronie
 ```
-After this, you'll most likely want to set up a user account, ssh keys and configure [sudo](https://wiki.archlinux.org/index.php/Sudo#Configuration). I'll leave this as an excercise to the reader. Don't forget to change or remove the root user's password and ensure SSH works.
+After this, you'll most likely want to set up a user account, ssh keys and configure [sudo](https://wiki.archlinux.org/index.php/Sudo#Configuration). I'll leave this as an exercise to the reader. Don't forget to change or remove the root user's password and ensure SSH works.
 
 ### Setting a static IPv4 address ###
 
