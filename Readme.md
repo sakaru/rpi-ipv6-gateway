@@ -19,6 +19,7 @@ My ISP doesn't provide IPv6 (if they did I wouldn't undertake this project). So 
 Here are screenshots of my tunnel (with IP addresses modified).
 
 ![Tunnel Configuration](imgs/tunnel-config.png)
+
 In the `Advanced` tab, I changed the `Update Key`. This is optional
 
 ![Tunnel Configuration — advanced tab](imgs/tunnel-config-advances.png)
