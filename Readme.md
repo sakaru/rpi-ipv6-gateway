@@ -20,6 +20,7 @@ Here are screenshots of my tunnel (with IP addresses modified).
 
 ![Tunnel Configuration](imgs/tunnel-config.png)
 In the `Advanced` tab, I changed the `Update Key`. This is optional
+
 ![Tunnel Configuration — advanced tab](imgs/tunnel-config-advances.png)
 
 ## Installing the Operating System ##
