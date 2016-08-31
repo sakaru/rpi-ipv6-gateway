@@ -114,8 +114,13 @@ Again, check the `status` command doesn't show any errors.
 
 ### ip6tables ###
 
-Copy `filesystem/etc/iptables/ip6tables.rules` to `/etc/iptables/ip6tables.rules`.
+Copy `filesystem/root/ipv6tables.rules.sh` to `/root/ipv6tables.rules.sh` (or wherever you like really. Note the line `ip6tables -A FORWARD -i he-ipv6 -p tcp -d 2001:1111:9999:3333::/64 --dport 22 -j ACCEPT`, change the IP to be your `Routed /64`, or comment out the line if you don't want to forward inbound SSH. Also the lines immediately following allow SSH to the rpi gateway.
+
 ```bash
+cd
+chmod +x ipv6tables.rules.sh
+./ipv6tables.rules.sh
+ip6tables-save > /etc/iptables/ip6tables.rules
 systemctl start ip6tables
 systemctl enable ip6tables
 ```
