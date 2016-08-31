@@ -131,7 +131,7 @@ Check that `ip6tables -L -v -n` has a bunch of output.
 Connect a new device to your LAN (for example, disconnect your phone from the wifi and reconnect). Check that it can use IPv6. For example browse to https://jsonip.com or try connecting to https://ipv6.google.com. If it can, then you're good to go.
 
 ### Auto-update the tunnel endpoint on a dynamic IP ###
-If you have a dynamic IPv4 address provided by your ISP (most peoply do), then you'll need to update the `Client IPv4 address` on Tunnelbroker. On the `Advanced` tab of the tunnel configuration you will see an `Example Update URL` provided by Tunnelbroker. Copy this value into your crontab:
+If you have a dynamic IPv4 address provided by your ISP (most people do), then you'll need to update the `Client IPv4 address` on Tunnelbroker. On the `Advanced` tab of the tunnel configuration you will see an `Example Update URL` provided by Tunnelbroker. Copy this value into your crontab:
 Open the crontab editor
 ```bash
 cron -e
