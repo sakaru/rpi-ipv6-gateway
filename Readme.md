@@ -19,6 +19,11 @@ Table of Contents
     * [ip6tables](#ip6tables)
       * [Testing ip6tables](#testing-ip6tables)
     * [Auto-update the tunnel endpoint on a dynamic IP](#auto-update-the-tunnel-endpoint-on-a-dynamic-ip)
+  * [Additional stuff](#additional-stuff)
+    * [Online port scanner](#online-port-scanner)
+    * [Browser extensions](#browser-extensions)
+    * [No more NAT!!](#no-more-nat)
+    * [Netflix :(](#netflix-)
 
 ## About ##
 This will let you set up a Raspberry PI 2 to act as an IPv6 tunnel and IPv6 DHCP server on your LAN. All your devices will automatically recieve IPv6 addresses when they connect to your LAN.
@@ -131,3 +136,18 @@ Set your tunnel to update every 10 minutes (for instance):
 */10 * * * * curl -s 'https://<username>:<tunnel-token>@ipv4.tunnelbroker.net/nic/update?hostname=<tunnel-id>' &> /dev/null
 ```
 The `cronie` service is already running as it was enabled earlier.
+
+## Additional stuff ##
+
+### Online port scanner ###
+
+If you want to double check reachability from outside, use [an online IPv6 port scanner](http://www.subnetonline.com/pages/ipv6-network-tools/online-ipv6-port-scanner.php).
+
+### Browser extensions ###
+Firefox has an extension called [4or6](https://addons.mozilla.org/en-US/firefox/addon/4or6/) and Chrome has one called [IPvFoo](https://chrome.google.com/webstore/detail/ipvfoo/ecanpcehffngcegjmadlcijfolapggal) which can tell you if you're currently using IPv4 or IPv6 to connect to a website.
+
+### No more NAT!! ###
+Your rpi now has a permanent and static IPv6 address. If you own a domain name, you should consider creating an AAAA record for the rpi. Then if you're away (but still on an IPv6 network) you can connect to your rpi at home to initiate downloads or otherwise use your home internet.
+
+### Netflix :( ###
+Check that netflix doesn't block your streams, they might think you're trying to get around their geo-blockers. Netflix does work for me, but I've heard this isn't always the case.
