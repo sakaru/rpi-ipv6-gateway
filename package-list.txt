@@ -1,0 +1,15 @@
+bash-completion
+bind-tools
+cronie
+dfc
+htop
+net-tools
+ntp
+openssh
+radvd
+rsync
+screen
+sudo
+vim
+wget
+
