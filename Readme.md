@@ -85,6 +85,13 @@ Address6=('2001:1111:9999:3333::/64')
 ```
 Double check the values of the file to see they match your LAN. Replace `2001:1111:9999:3333::/64` with your `Routed /64` value provided by Tunnelbroker. To enable this on subsequent boots: `netctl enable eth0-static`.
 
+### Allow IPv6 forwarding ###
+To allow the machine to act as an IPv6 gateway it needs to be able to forward IPv6 traffic. Create the file `/etc/sysctl.d/ipv6.conf`, copy this into it:
+```
+net.ipv6.conf.default.forwarding=1
+net.ipv6.conf.all.forwarding=1
+```
+
 ### Reboot ###
 Before continuing you should reboot the rpi. Check the hostname, the clock and importantly the local IP are correct.
 
