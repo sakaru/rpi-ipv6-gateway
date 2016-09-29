@@ -62,10 +62,7 @@ pacman -Syu
 Install packages we will use later, as well as useful utilities. Then start & enable OpenSSH and cronie:
 ```bash
 pacman -S bash-completion bind-tools cronie dfc htop net-tools ntp openssh radvd rsync screen sudo vim wget
-systemctl start sshd
-systemctl enable sshd
-systemctl start cronie
-systemctl enable cronie
+systemctl enable --now sshd cronie
 ```
 After this, you'll most likely want to set up a user account, ssh keys and configure [sudo](https://wiki.archlinux.org/index.php/Sudo#Configuration). I'll leave this as an exercise to the reader. Don't forget to change or remove the root user's password and ensure SSH works.
 
@@ -151,8 +148,7 @@ interface eth0
 ```
 Change the `prefix` value to your `Routed /64` value.
 ```bash
-systemctl start radvd
-systemctl enable radvd
+systemctl enable --now radvd
 ```
 
 #### Testing radvd ####
@@ -241,8 +237,7 @@ cd
 chmod +x ipv6tables.rules.sh
 ./ipv6tables.rules.sh
 ip6tables-save > /etc/iptables/ip6tables.rules
-systemctl start ip6tables
-systemctl enable ip6tables
+systemctl enable --now ip6tables
 ```
 
 #### Testing ip6tables ####
